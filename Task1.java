@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class task_1 {
+public class Task1 {
 
     private final static int sizeAlphabet = 'z' - 'a' + 1;
 

@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class task_1Test {
+class Task1Test {
     private ByteArrayOutputStream sink;
     private PrintStream controlledOut;
     private ByteArrayInputStream controlledIn;
@@ -28,7 +28,7 @@ class task_1Test {
     void testAlphabet(final String input, final String expected) {
         setControlledStreamsWithInput(input);
         try {
-            task_1.main(new String[]{});
+            Task1.main(new String[]{});
             controlledOut.flush();
             assertEquals(expected, sink.toString().trim());
         } finally {
@@ -41,7 +41,7 @@ class task_1Test {
     void testImpossible(final String input) {
         setControlledStreamsWithInput(input);
         try {
-            task_1.main(new String[]{});
+            Task1.main(new String[]{});
             controlledOut.flush();
             assertEquals("Impossible", sink.toString().trim(), "Error on input " + input);
         } finally {
